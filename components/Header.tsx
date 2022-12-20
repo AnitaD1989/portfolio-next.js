@@ -2,10 +2,15 @@ import React from 'react'
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import Link from 'next/link';
+import { Social } from '../typing';
 
-function Header() {
+type Props = {
+  socials: Social[]
+};
+
+export default function Header({socials}: Props) {
   return(
-    <header className="sticky top-0 flex items-start justify-between max-w-7-xl mx-auto z-20 xl-items-center xs-col">
+    <header className="sticky top-0 flex items-start justify-between max-w-7xl mx-auto z-20 xl-items-center xs-col">
       <motion.div 
       initial={{
         x: -500,
@@ -20,13 +25,22 @@ function Header() {
       transition={{
         duration: 1.5,
       }}
-      
+
       className="flex flex-row item-center">
+
+      {/* Social Icons */}
+      {socials.map((social) => (
+        // eslint-disable-next-line react/jsx-key
         <SocialIcon 
-          url="https://github.com/AnitaD1989"
+        key={social._id}
+          url={social.url}
           fgColor="gray" 
           bgColor="transparent"
         />
+        
+        ))}
+      
+  
         <SocialIcon 
           url="https://linkedin.com/in/jaketrent" 
           fgColor="gray" 
@@ -77,4 +91,3 @@ function Header() {
   )
 }
 
-export default Header;

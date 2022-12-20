@@ -1,11 +1,13 @@
 import React from 'react'
 import { motion } from "framer-motion";
+import { Skill } from '../typing';
 
 type Props = {
+  skill: Skill;
   directionLeft?: boolean;
 };
 
-function Skill({directionLeft }: Props) {
+function Skill({skill, directionLeft }: Props) {
   return (
     <div className="top-36 flex group relative cursor-pointer">
       <motion.img
