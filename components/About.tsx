@@ -1,7 +1,6 @@
 import React from 'react'
 import {motion} from "framer-motion";
 import { PageInfo } from '../typing';
-import { urlFor } from '../sanity';
 
 type Props = {
   pageInfo: PageInfo
@@ -31,7 +30,7 @@ export default function About({pageInfo}: Props) {
         transition={{
           duration: 1.2,
         }}
-        src={urlFor(pageInfo?.profilePic).url()}
+        src="/images/Oeschinensee.jpeg"
         className="rounded-full object-cover m-auto 
         md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]"
       />
@@ -41,7 +40,14 @@ export default function About({pageInfo}: Props) {
         <span className="underline decoration-[#F7AB0A]/50">little</span> background
         </h4>
         <p className="text-base sm:h-full sm:overflow-y-auto">
-          {pageInfo?.backgroundInformation}
+          👋 I`m Anita a Junior Full Stack Developer, looking for new chellenges and opportunieties,
+          here`s a little bit about me... I`ve been coding for over 2 years now, constantly learning 
+          and improving my skills. I started coding for fun and it became my passion🌟 
+          I am up to date with new technological and visual trends.
+          To learn I mostly use the sources found on the Internet and I practice alot.
+          I also took a part in Bootcamp from Kodilla school, where I was supported by the mentor 1:1.
+          I am not afraid of breaking patterns and I love new challenges.
+          Give me your idea or guidelines and I will take care of the rest.😊
         </p>
       </div>
     </motion.div>

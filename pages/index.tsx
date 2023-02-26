@@ -31,46 +31,38 @@ const Home = ({pageInfo, skills, projects, socials}: Props) => {
         <title>Anita`s Portfolio</title>
       </Head>
       
-      <Header socials={socials} />
+      <Header socials = {socials} />
 
-      {/* Hero */}
       <section id="hero" className="snap-start">
-        <Hero  pageInfo={pageInfo}/>
+        <Hero  pageInfo = {pageInfo} />
       </section>
 
-      {/*About */}
       <section id="about" className="snap-center">
-        <About pageInfo= {pageInfo} />
-      </section>
+        <About pageInfo={pageInfo} />
+      </section> 
 
-      {/* Experience */}
-
-      {/*Skills */}
       <section id="skills" className="snap-start">
-        <Skills skills= {skills} />
-
+        <Skills skills = {skills} />
       </section>
 
-      {/*Projects */}
       <section id="projects" className="snap-start">
-        <Projects projects= {projects} />
+        <Projects projects={projects} />
       </section>
 
-      {/* Contact Me */}
       <section id="contact" className="snap-start">
         <ContactMe />
       </section>
 
-      <Link href="#hero">
-        <footer className="sticky bottom-5 w-full cursor-pointer">
-          <div className="flex item-center justify-center">
+      <footer className="sticky bottom-5 w-full cursor-pointer">
+        <div className="flex item-center justify-center">
+          <Link href="#hero">
             <Image 
               className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer" 
               src="https://img.freepik.com/premium-vector/pretty-business-woman-standing-with-arms-crossed_546897-360.jpg?w=2000" alt="" />
-          </div>
-         </footer>
-        </Link>
-      </div>
+          </Link>
+        </div>
+      </footer>
+    </div>
   );
 };
 
@@ -91,9 +83,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     },
 
     revalidate: 10,
-
-  };
-};
+  }
+}
 
 
 

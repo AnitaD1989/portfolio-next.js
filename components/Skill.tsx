@@ -29,7 +29,7 @@ function Skill({skill, directionLeft }: Props) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Skill;

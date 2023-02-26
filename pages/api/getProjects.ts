@@ -22,5 +22,6 @@ export default async function handler(
   
   const projects: Project[] = await sanityClient.fetch(query);
 
-  res.status(200).json({ projects })
+  res.status(200).json({ projects });
 }
+ 
